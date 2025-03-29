@@ -1,25 +1,30 @@
 import network
 import time
-import wifi  # the wifi.py file you created
+
+ssid = "YourHotspotName"
+password = "YourHotspotPassword"
 
 def connect():
+    print("Trying to connect to Wi-Fi...")
+    print("SSID:", ssid)
+    print("Password:", password)
+
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
 
     if not wlan.isconnected():
-        print("Connecting to network...")
-        wlan.connect(wifi.ssid, wifi.password)
+        wlan.connect(ssid, password)
 
-        timeout = 10  # seconds
+        timeout = 10
         while not wlan.isconnected() and timeout > 0:
             print(".", end="")
             time.sleep(1)
             timeout -= 1
 
     if wlan.isconnected():
-        print("\nConnected to WiFi!")
+        print("\n✅ Connected!")
         print("IP Address:", wlan.ifconfig()[0])
     else:
-        print("\nFailed to connect.")
+        print("\n❌ Failed to connect.")
 
 connect()
