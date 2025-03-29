@@ -1,14 +1,24 @@
->>> %Run -c $EDITOR_CONTENT
 
-MPY: soft reboot
-1. Querying google.com:
-b'<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world\'s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\'re looking for." name="description"><meta content="noodp, " name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standa
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>
+"""
 
+from phew import access_point, connect_to_wifi, is_connected_to_wifi, dns, server
+from phew.template import render_template
+from random import choice
+import machine
+import _thread
+import utime
+import time
+import network
+import config
+import urequests
+import neopixel
+import math
+import os
+import json
+import re
+import gc
 
-2. Querying the current GMT+0 time:
-Traceback (most recent call last):
-  File "<stdin>", line 28, in <module>
-  File "requests/__init__.py", line 201, in get
-  File "requests/__init__.py", line 79, in request
-OSError: -2
->>> 
+# Time with daylight savings time and time zone factored in, edit this to fit where you are
+worldtimeurl = "https://timeapi.io/api/TimeZone/zone?timezone=" + config.TIMEZONE
