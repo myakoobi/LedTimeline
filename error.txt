@@ -1,4 +1,14 @@
+>>> %Run -c $EDITOR_CONTENT
+
 MPY: soft reboot
+1. Querying google.com:
+b'<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world\'s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\'re looking for." name="description"><meta content="noodp, " name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standa
+
+
+2. Querying the current GMT+0 time:
 Traceback (most recent call last):
-  File "<stdin>", line 12, in <module>
-AttributeError: 'module' object has no attribute 'NeoPixel'
+  File "<stdin>", line 28, in <module>
+  File "requests/__init__.py", line 201, in get
+  File "requests/__init__.py", line 79, in request
+OSError: -2
+>>> 
