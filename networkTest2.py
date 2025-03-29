@@ -18,13 +18,20 @@ print("\n✅ Connected! IP:", wlan.ifconfig()[0])
 
 # Example 1: Query Google
 print("\n1. Querying google.com:")
-r = urequests.get("http://www.google.com")
-print("Google response length:", len(r.content))
-r.close()
+try:
+    r = urequests.get("http://www.google.com")
+    print("Google response length:", len(r.content))  # Print response length
+    r.close()
+except Exception as e:
+    print("Failed to fetch Google:", e)
 
-# Example 2: Query UTC time from a working API
-print("\n2. Querying the current GMT+0 time:")
-r = urequests.get("http://worldtimeapi.org/api/timezone/Etc/UTC")
-data = r.json()
-print("UTC Time:", data["datetime"])
-r.close()
+# Example 2: Query the current time using timeapi.io
+print("\n2. Querying the current time from timeapi.io:")
+try:
+    r = urequests.get("https://timeapi.io/api/TimeZone/zone?timezone=Europe/Bucharest")  
+    data = r.json()
+    print("Current Time in Bucharest:", data["currentLocalTime"])  
+    r.close()
+except Exception as e:
+    print("Failed to fetch time:", e)
+
