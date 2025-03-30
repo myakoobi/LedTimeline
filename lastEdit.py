@@ -1,3 +1,6 @@
+# this is the final code that you need this will light up the amunt of led lights using the leds.
+# by using the time api. 
+
 import network
 import urequests
 import time
