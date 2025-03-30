@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Timer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+</head>
+<body>
+    <div id="topology">
+    <div id="root">
+        <h1>Chronologie.</h1>
+        <div class="card">
+            <button id="toggleButton" class="off">OFF</button>
+            
+            <div class="input-container">
+                <label for="intervalInput">Add Event:</label>
+                <input type="text" id="eventInput" placeholder="Enter event...">
+                
+                <label for="timeInput"> &nbsp &nbsp Add Time: &nbsp &nbsp </label>
+                <input type="text" id="timeInput" placeholder="Enter time...">
+                
+                <button class="save-btn" onclick="saveEvent()">Save</button>
+            </div>
+            
+            <div class="input-container">
+                <label for="intervalInput">Interval Start:</label>
+                <input type="text" id="eventInput" placeholder="Start time...">
+                
+                <label for="timeInput">Interval End:</label>
+                <input type="text" id="timeInput" placeholder="End time...">
+                
+                <button class="save-btn" onclick="saveInterval()">Save</button>
+            </div>
+        </div>
+        <p class="read-the-docs"></p>
+    </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.TOPOLOGY({
+                el: "#topology",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00
+            });
+        });
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            if (this.classList.contains('off')) {
+                this.classList.remove('off');
+                this.classList.add('on');
+                this.textContent = 'ON';
+            } else {
+                this.classList.remove('on');
+                this.classList.add('off');
+                this.textContent = 'OFF';
+            }
+        });
+        
+        function saveTime() {
+            const timeInput = document.getElementById('timeInput').value;
+            console.log("Saved Time:", timeInput);
+            document.getElementById('timeInput').value = "";
+        }
+        
+        function saveEvent() {
+            const eventInput = document.getElementById('eventInput').value;
+            const timeInput = document.getElementById('timeInput').value;
+            
+            console.log("Saved Event:", eventInput, "| Time:", timeInput);
+            
+            document.getElementById('eventInput').value = "";
+            document.getElementById('timeInput').value = "";
+        }
+
+        function saveInterval() {
+            const startInput = document.getElementById('startInput').value;
+            const endInput = document.getElementById('endInput').value;
+            
+            console.log("Start time:", startInput, "| End time:", endInput);
+            
+            document.getElementById('startInput').value = "";
+            document.getElementById('endInput').value = "";
+        }
+
+    </script>
+</body>
+</html>

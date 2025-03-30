@@ -1,0 +1,107 @@
+/* Dark background and light text */
+/* Add gradient background to the body */
+body {
+    background: linear-gradient(45deg, #232020, #136d42);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; 
+    color: #c6be47; /* Light text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#topology {
+    z-index: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+h1 {
+    font-size: 3.2em;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Styling */
+.card {
+    padding: 2em;
+    background: #1e1e1e; /* Darker card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+/* Read-the-docs text */
+.read-the-docs {
+    color: #dec839; /* Slightly lighter for readability */
+}
+
+/* Toggle Button */
+button {
+    margin-left: 1rem;
+    padding: 8px 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s ease-in-out;
+}
+
+.on {
+    background: #1f211f; /* Green for ON */
+    color: rgb(234, 212, 64);
+}
+
+.off {
+    background: #1b1b1b; /* Red for OFF */
+    color: rgb(225, 219, 36);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Styling for input */
+.input-container input {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    width: 150px;
+}
+
+/* Save button styles */
+.save-btn {
+    background-color: black;
+    color: #e7d538;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #222;
+}

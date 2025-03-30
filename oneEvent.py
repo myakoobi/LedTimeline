@@ -42,10 +42,6 @@ def get_current_minutes():
 
 def update_leds(minutes_passed):
     """Update LEDs based on the progress of the day"""
-    if minutes_passed is None:
-        print("⚠️ Skipping LED update due to invalid time")
-        return
-
     leds_on = int(minutes_passed / 24)  # 1 LED = 24 minutes
 
     # Update the progress bar (green LEDs)
@@ -129,9 +125,4 @@ while True:
         last_update_time = time.time()
     
     time.sleep(0.1)  # Short sleep to keep checking for serial commands frequently
-
-
-
-
-
 
