@@ -1,3 +1,8 @@
+# this file lights up the one led which is our event. 
+# and it marks that light at the same time showing the current time by lighting led lights. 
+
+
+
 import network
 import urequests
 import time
