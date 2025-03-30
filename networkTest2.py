@@ -28,9 +28,9 @@ except Exception as e:
 # Example 2: Query the current time using timeapi.io
 print("\n2. Querying the current time from timeapi.io:")
 try:
-    r = urequests.get("https://timeapi.io/api/TimeZone/zone?timezone=Europe/Bucharest")  
+    r = urequests.get("https://timeapi.io/api/TimeZone/zone?timezone=America/New_York")  
     data = r.json()
-    print("Current Time in Bucharest:", data["currentLocalTime"])  
+    print("Current Time in NYC:", data["currentLocalTime"])  
     r.close()
 except Exception as e:
     print("Failed to fetch time:", e)
