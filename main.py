@@ -456,7 +456,7 @@ def wifi_setup_mode():
     dns.run_catchall(ip)
     server.run()
 
-    def main():
+def main():
     ssid = 'Mohammad'
     password = 'abbas000'
     np = neopixel.NeoPixel(machine.Pin(p), n)
