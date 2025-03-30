@@ -1,6 +1,10 @@
+this file serves as a general error that could be encountered. 
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>
+Also this file contains the API which could be used to extract live time. 
+
+
+
+ <https://www.gnu.org/licenses/>
 """
 
 from phew import access_point, connect_to_wifi, is_connected_to_wifi, dns, server
