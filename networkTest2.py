@@ -1,3 +1,10 @@
+# this file is to connect the pi to the wifi.
+# in this case we need wifi to get the current time. 
+
+
+
+
+
 import network
 import urequests
 import time
