@@ -1,3 +1,7 @@
+# the lights cannot be light up without this file or library neo pixel
+
+
+
 from neopixel import Neopixel
 import utime
 
