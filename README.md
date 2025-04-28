@@ -6,6 +6,4 @@ In this project we used Rasberry pi and Pico pi WH and plugged it into the bread
 
 The pico has the api server key which it takes the current time and updates the time every minute automatically from that server. 
 
-The pico lights up the amounts of led to show how much time in the has been passed
-
-
+The pico lights up the amounts of led to show how much time in the has been passe
